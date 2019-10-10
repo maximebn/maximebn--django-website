@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+<!-- stories navigation overloading : active -->
+
+{% block navigation_stories %}
+    <li><a href="{% url "storiesMain" %}" class="active"><div>+ Stories</div></a>
+        <ul>
+        </ul>
+    </li>
+{% endblock %}
+
+<!-- stories navigation overloading : END -->
+
+
+<!-- Main content -->
+
+{% block content%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+                                
+            <!-- Portfolio Wrap -->
+            <div class="portfolio-wrap margin-top-50">
+                                                            
+                <!-- Portfolio Items -->
+                <div id="portfolio-slider" class="cbp single-project">
+                    
+                    <!-- Main photo of every story is displayed : FOR -->
+                    {% for story in list_stories %}
+
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{ story.photo.url }}" alt="">
+                            </div>
+                            
+                            <div class="slider-project-details">
+                                <h1 class="sp-title">{{ story.titre }}</h1>
+                                    <a href="{% url "storiesDetails" id=story.id %}" class="sp-link">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <!-- Default value if no story is found -->
+                    {% empty %}
+                    <p>Oups, aucun article pour le moment !</p>
+                    <!-- Default value if no story is found : END -->
+
+                    {% endfor %}
+                    <!-- Main photo of every story is displayed : END FOR -->
+                                    
+                                        
+                </div>
+                <!-- Portfolio Items Ends -->
+                                                                  
+            </div>
+            <!-- Portfolio Wrap Ends -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Main content : END-->
+

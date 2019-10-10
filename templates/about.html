@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- About nav overloading : active -->
+
+{% block navigation_about %}
+    <li><a href="{% url "about" %}" class="active"><div>A propos</div></a></li>
+{% endblock %}
+
+<!-- About nav overloading : END -->
+
+
+<!-- Main content -->
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="page-title">
+              <h1 class="heading">En quête de <b>mouvement<b></h1>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <img src="images/avatar.png" alt="Avatar" class="avatar-img">
+        </div>
+        <div class="col-md-6 col-sm-12 margin-top-35">
+            <h2>De qui, de quoi ?</h2>
+                <p>Au fil de mes voyages, je cultive l'usage de la liberté et ma curiosité au contact bienveillant de l'humain qui compose la planète.
+                Mes pieds et mon appareil m'emmènent parfois très près, parfois plus loin, sur les traces silencieuses du Royaume de Champa ou
+                aux confins de l'Ismaélisme, assistant avec abandon à l'indissoluble sublimation des peuples et de leur identité culturelle.
+                Une histoire perpétuelle du temps ?</p>
+
+                <p>Résidant dans le sud de la France, et ingénieur de formation, je me consacre aujourd'hui partiellement à la photographie en
+                préparant plusieurs séries photographiques de mes séjours en Asie dont vous découvrirez des extraits sur ce site.</p>
+
+                <br>
+                <br>
+                <p>contact[at]maximebn.com</p>
+                <p>https://instagram.com/max.neihg/</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Main content : END -->

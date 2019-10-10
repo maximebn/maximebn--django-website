@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Main content -->
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="page-title">
+              <h1 class="heading policy">Politique de <b>confidentialité</b></h1>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 margin-top-35">
+
+            {% for policy in dataPolicies %}
+
+            <h2 class="policy">{{ policy.categorie }}</h2>
+            {% autoescape off %}
+                <p> {{ policy.contenu | linebreaks }} <p>
+            {% endautoescape %}
+
+            <!-- Default value if no policy is found -->
+            {% empty %}
+                <p>Oups, aucune mention relative à la confidentialité des données, ce doit être une erreur !</p>
+                <meta http-equiv="refresh" content="3;url={% url "storiesMain" %}">
+
+            <!-- Default value if no mention is found : END -->
+
+            {% endfor %}
+            <!-- Each occurence of mentions category is displayed : END FOR -->
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Main content : END -->
+
+
+<!-- Footer : none -->
+{% block footer %}
+{% endblock %}
+<!-- Footer : none : END -->

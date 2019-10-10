@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Main content -->
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="heading-success"><b>Félicitations</b><br>Votre message a été envoyé avec succès !</h1>
+            <div class="img-success">
+                <img src="{% static 'images/rocketShip.png' %}">
+            </div>
+            <h4 class="heading-success"> Vous n'avez pas encore fait décoller de fusée, mais presque !</h4>
+    </div>
+</div>
+
+<meta http-equiv="refresh" content="5;url={% url "storiesMain" %}">
+
+{% endblock %}
+
+<!-- Main content : END -->
+
+
+<!-- Footer : none -->
+{% block footer %}
+{% endblock %}
+<!-- Footer : none : END -->
+
+

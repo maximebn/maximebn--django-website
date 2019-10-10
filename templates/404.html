@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Main content -->
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="heading-404"><b>Oups ... !</b><br>Il semblerait que vous vous soyez perdus parmi les 404 photos de ce site...</h1>
+            <div class="img-404">
+                <img src="{% static 'images/404_2.png' %}">
+            </div>
+            <h4 class="heading-404"> Vous allez être redirigé vers la page d'accueil. Por favor, ne paniquez pas !</h4>
+    </div>
+</div>
+
+<meta http-equiv="refresh" content="5;url={% url "storiesMain" %}">
+
+{% endblock %}
+
+<!-- Main content : END -->
+
+
+<!-- Footer : none -->
+{% block footer %}
+{% endblock %}
+<!-- Footer : none : END -->

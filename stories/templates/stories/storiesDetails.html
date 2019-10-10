@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+<!-- stories navigation overloading : active -->
+
+{% block navigation_stories %}
+    <li><a href="{% url "storiesMain" %}" class="active"><div>+ Stories</div></a>
+        <ul>
+        <li><a href=""><div>First Story</div></a></li>
+        <li><a href="">Second Story</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+<!-- stories navigation overloading END -->
+
+<!-- Main content -->
+{% block content%}
+  <div class="project-single margin-top-100 margin-top-50-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="project-title">
+                    <h1>{{ story.titre }}</h1>
+                    <p>{{ story.sousTitre }}</p>
+                </div>
+            </div>
+            
+            <div class="col-sm-9">
+                <div class="project-desc">
+                    <p>{{ story.contenu|linebreaks }}</p>
+                </div>
+            </div>    
+            
+            <div class="col-sm-3">
+                <ul class="project-meta margin-top-15 margin-bottom-20">
+                    <li><span>Où ça ?</span>{{ story.pays }}</li>
+                    <li><span>En quelle année ?</span>{{ story.annee }}</li>
+                    <li class="project-share">
+                        <span>Partager</span>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-sm-12 margin-top-20">
+                <div id="portfolio-container" class="cbp" data-layoutmode="grid" data-gaphorizontal="30" data-gapvertical="30" data-large-desktop="3" data-medium-desktop="3" data-tablet="2">
+                
+                <!-- Each image is displayed : FOR -->                   
+                   
+                {% for image in images %}
+                    <div class="cbp-item">
+                        <div class="cbp-item-wrapper">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{ image.img.url }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                {% empty %}
+                <p>Oups, aucun article pour le moment !</p>
+                <!-- Default value if no image is found : END -->
+
+                {% endfor %}
+                <!-- Each image is displayed : END FOR -->                   
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <ul class="project-nav">
+                    <li class="page-prev">
+                        <a class="previous" href="#" rel="prev">Prev Work</a>
+                    </li>
+                    <li class="page-main">
+                        <a href="#">All Works</a>
+                    </li>
+                    <li class="page-next">
+                        <a class="next" href="#" rel="next">Next Work</a>
+                    </li>					    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<!-- Main content : END -->

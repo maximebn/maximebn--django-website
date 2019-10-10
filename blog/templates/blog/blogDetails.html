@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+<!-- Blog nav overloading : active -->
+
+{% block navigation_blog %}
+    <li><a href="{% url "blogList" %}" class="active"><div>+ Blog</div></a></li>
+{% endblock %}
+
+<!-- Blog nav overloading : END -->
+
+
+<!-- Main content -->
+
+{% block content%}
+
+<div class="container">
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="post-single-wrap default clearfix">
+            <article class="post clearfix">
+
+            <!-- Title, meta, photo -->
+
+                <h1 class="post-title">{{ article.titre }}</h1>
+                    <ul class="post-meta">
+                        <li class="post-date">{{ article.date|date:"DATE_FORMAT" }}</li>
+                        <li class="post-author">{{ article.auteur }}</li>
+                        <li class="post-category"><a href="{% url "blogListByCategory" categorie=article.categorie.nom %}">{{ article.categorie.nom }}</a></li>
+                    </ul>
+                    <div class="post-img">
+                        <img src="{{ article.photo.url }}">
+                    </div>
+            <!-- Title, meta, photo : END-->
+
+            <!-- Article content -->
+                        <div class="post-content-wrap clearfix">
+                            <div class="col-md-9 no-padding-left">
+                                <p>{{ article.contenu|linebreaks}}</p>
+                            </div>
+            <!-- Article content : END-->
+
+            <!-- Article sidebar : last articles and share features -->
+                            <div class="col-md-3 no-padding-right">
+                                <div class="post-sidebar">
+                                        <h4>Derniers articles</h4>
+                                            <div>
+                                                <ion-icon name="code-download"></ion-icon>
+                                            </div>
+                                            <!-- Each occurence of the last articles is displayed with a thumbnail (easy thumbnail package) : FOR -->
+                                            {% for article in last_articles %}
+                                                <a href="{% url "blogDetails" id=article.id slug=article.slug %}">
+                                                    <img class="mini" src="{% thumbnail article.photo 150x150 crop %}"/>
+                                                </a>
+
+                                            <!-- Default value if no article is found -->
+                                            {% empty %}
+                                                <p>Oups, aucun article pour le moment !</p>
+
+                                            <!-- Default value if no article is found : END -->
+                                            {% endfor %}
+                                            <!-- Each occurence of last articles list is displayed : END FOR -->
+                                    
+                                    <div class="post-share">
+                                            <div> 
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:8000{{ request.get_full_path|urlencode }}">
+                                                <ion-icon name="logo-facebook"></ion-icon>
+                                                </a>
+                                            </div>
+
+                                            <div> 
+                                                <a href="http://www.twitter.com/share?url=http://localhost:8000{{ request.get_full_path|urlencode }}">
+                                                <ion-icon name="logo-twitter"></ion-icon>
+                                                </a>
+                                            </div>
+
+                                            <div> 
+                                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:8000{{ request.get_full_path|urlencode }}&title=thr">
+                                                <ion-icon name="logo-linkedin"></ion-icon>
+                                                </a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+             <!-- Article sidebar : last articles and share features : END-->
+
+                        </div>
+            </article>                                        
+        </div>
+    </div>
+ </div>
+</div>
+{% endblock %}
+
+<!-- Main content : END-->

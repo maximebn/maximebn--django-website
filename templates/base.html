@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+
+    <head>
+        
+        <!-- Metas -->      
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Maxime" />
+        
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'css/cubeportfolio.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'ss/owl.carousel.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+        
+        <!-- Document Title -->      
+        <title> {% block title %}Maxime Boulanghien | Photographie{% endblock %}</title>
+        
+    </head>
+
+    <body>
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header" class="standard">
+                <div class="header-wrapper">
+                    <div class="container">
+                        <div id="logo">
+                            <a href="{% url "storiesMain" %}">
+                                <div>Maxime Boulanghien</div>
+                            </a>
+                        </div>
+                        <span id="menu-trigger"><span></span></span>
+
+                        <nav id="main-menu">
+                            <ul>
+                            {% block navigation_stories %}
+                                <li><a href="{% url "storiesMain" %}">+ Stories</a>
+                                    <ul>
+                                       <li><a href="">First Story</a></li>
+                                        <li><a href="">Second Story</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            {% endblock %}
+
+                            {% block navigation_blog %}
+                                <li><a href="{% url "blogList" %}">+ Blog</a></li>
+                            {% endblock %}
+
+                            {% block navigation_about %}
+                                <li><a href="{% url "about" %}">A propos</a></li>
+                            {% endblock %}
+
+                            {% block navigation_contact %}
+                                <li><a href="{% url "contact" %}">Contact</a></li>
+                            {% endblock %}
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- Header Ends -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper">
+
+                <!-- Main Wrapper -->
+                <div id="main-wrapper">
+
+                            {% block content%}
+                            {% endblock %}
+
+                </div>    
+                <!-- Main Wrapper Ends -->
+
+                <!-- Footer -->
+                <footer id="footer" class="standard">
+                {% block footer %}
+
+                    <div class="container">
+                        <div class="row">
+                            <div>
+                                <a href="https://github.com/">
+                                  <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                                <a href="https://github.com/">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a id="canonical-logo" href="https://canonical.com/" target="_blank">
+                                    <img src="{% static 'images/canonical_aubergine_hex.png' %}">
+                                </a>
+                                <a id="py-logo" href="https://www.python.org/" target="_blank">
+                                  <img src="{% static 'images/python.png' %}">
+                                </a>
+                                <a id="django" href="https://www.djangoproject.com/" target="_blank">
+                                  <img src="{% static 'images/django-logo-positive.png' %}">
+                                </a>
+                                <a>
+                                  <ion-icon name="pulse"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="copyrights">                                    
+                                 <a class="copyrights"> &COPY; 2019 - homemade. Powered by django &nbsp - </a><a class="copyrights-policy" href="{% url "mentions" %}">&nbsp Mentions légales &nbsp -</a>  <a class="copyrights-policy" href="{% url "policy" %}">&nbsp Confidentialité de vos données</a>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endblock %}
+                </footer>
+                <!-- Footer Ends -->
+
+            </div>
+            <!-- Content Wrapper Ends -->
+
+        </div> 
+        <!-- Page Wrapper Ends -->
+        
+        <!-- Scripts -->
+        <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
+        <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'js/superfish.js' %}"></script>
+        <script src="{% static 'js/cubeportfolio.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <!-- Scripts Ends -->
+    </body>
+</html>

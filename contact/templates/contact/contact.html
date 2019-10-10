@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+<!-- Blog nav overloading : active -->
+
+{% block navigation_contact %}
+    <li><a href="{% url "contact" %}" class="active"><div>Contact</div></a></li>
+{% endblock %}
+
+<!-- Blog nav overloading : END -->
+
+
+<!-- Main content -->
+
+{% block content%}
+
+<div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title has-description">
+                                    <h1>Une question, un message?</h1>
+                                    <p>N'hésitez pas à utiliser le formulaire ci-dessous</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-8 col-md-8">
+                                <form action="{% url "contact" %}" method="post" class="contact-form">
+                                    {% csrf_token %}
+                                        <div class="col-sm-6 no-padding-left form-control-wrap">
+                                            {{ form.nom |add_class:'form-control' |append_attr:"placeholder: Mon nom*" }}
+                                        </div>
+
+                                        <div class="col-sm-6 no-padding-right form-control-wrap">
+                                            {{ form.email |add_class:'form-control' |append_attr:"placeholder: Mon adresse mail*" }}
+                                        </div>
+
+                                        <div class="col-sm-12 no-padding-left no-padding-right form-control-wrap">
+                                            {{ form.sujet |add_class:'form-control' |append_attr:"placeholder:Sujet*" }}
+                                        </div>
+
+                                        <div class="col-sm-12 no-padding-left no-padding-right form-control-wrap">
+                                              {{ form.message |add_class:'form-control' |append_attr:"placeholder:Message*" }}
+                                        </div>
+
+                                        <div class="form-submit">
+                                            <button type="submit" id="submit">Envoyer mon message</button>
+                                        </div>                                    
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-4 col-md-4">
+                                <div class="contact-info">
+                                    <div>
+                                        <span>Ou bien directement à :</span>
+                                            contact[at]maximebn.com
+                                    </div>
+                                    <div>
+                                        <span>Téléphone</span>
+                                        Pour les intimes
+                                    </div>
+                                    <address>
+                                        <span>Où ?</span>
+                                        Quelque part par là
+                                    </address>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}
+
+<!-- Main content : END-->
