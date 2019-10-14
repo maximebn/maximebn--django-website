@@ -31,7 +31,7 @@ language-selector==0.1
 launchpadlib==1.10.7
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
-lazy-object-proxy==1.4.1
+lazy-object-proxy==1.4.2
 louis==3.5.0
 lxml==4.2.1
 macaroonbakery==1.1.3
