@@ -13,22 +13,20 @@ Using Python Decouple for environment variables handling: cf. doc, config and se
 """
 
 import os
+from os.path import abspath, basename, dirname, join, normpath
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
+DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
+# Absolute filesystem path to the top-level project folder:
+SITE_ROOT = dirname(DJANGO_ROOT)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+# Site name:
+SITE_NAME = basename(DJANGO_ROOT)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
-
-ALLOWED_HOSTS = ['*']
+# URL configuration
+ROOT_URLCONF = 'maximebn.urls'
 
 # Application definition
 
@@ -57,14 +55,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'maximebn.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS':  [
             # Cette ligne ajoute le dossier templates/ à la racine du projet
-            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(DJANGO_ROOT, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -78,22 +74,9 @@ TEMPLATES = [
     },
 ]
 
-#_______________________________________________________________________
-
+# WebServer Gateway interface configuration
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = 'maximebn.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': config('DB_ENGINE'),         # Database engine
-        'NAME': config('DB_NAME'),             # Database name
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),        
-    }
-}
 
 
 # Password validation
@@ -117,29 +100,41 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#-----------------------------------------------------------------------
+# ------------ STATIC FILES CONFIGURATION ------------------------------
+# ----------------------------------------------------------------------
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
+# Static files (CSS, JavaScript, Images) configuration
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
+STATIC_ROOT = normpath(join(SITE_ROOT, 'assets'))
 
-LANGUAGE_CODE = 'fr-FR'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
+
+# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    normpath(join(SITE_ROOT, 'static')),
 )
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'media/')
+# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+#-----------------------------------------------------------------------
+# ------------ STATIC FILES CONFIGURATION : END ------------------------
+# ----------------------------------------------------------------------
 
+
+
+# Media configuration
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
+MEDIA_ROOT = normpath(join(SITE_ROOT, 'media'))
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+MEDIA_URL = '/media/'
+
+# Email backend configuration
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
@@ -147,36 +142,21 @@ EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 
-#__________________________________________________________________________________
-#-------------------------------------------------------------------------------
-# Additionnal security settings
-# ------------------------------------------------------------------------------
-#__________________________________________________________________________________
+# Manager configuration
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
+ADMINS = (
+    (config('ADMIN_NAME', default=''), config('ADMIN_EMAIL', default='')),
+)
+MANAGERS = ADMINS
 
-
-# Sensitive data exposure
-# https://docs.djangoproject.com/en/2.1/ref/middleware/#http-strict-transport-security
-
-SECURE_HSTS_SECONDS = 3600 # 1 heure,to me modified
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_SSL_REDIRECT= True
-
-# Click-jacking protection : X-frame middleware setting header option to deny loading resource within a frame
-# https://docs.djangoproject.com/en/2.1/ref/clickjacking/
-
-X_FRAME_OPTIONS = 'DENY'
-
-# XSS filtering protection enabled on web browsers (+ Django templates escaping specific characters)
-# https://docs.djangoproject.com/en/2.1/ref/clickjacking/
-
-SECURE_BROWSER_XSS_FILTER  = True
-
-# Cookie sessions protection, forcing cookies to be shared by HTTPS
-# https://docs.djangoproject.com/en/2.1/topics/http/sessions/
-
-SESSION_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True 
+# Internationalization
+# https://docs.djangoproject.com/en/2.0/topics/i18n/
+LANGUAGE_CODE = 'fr-FR'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
 # https://pyup.io/
