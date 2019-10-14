@@ -51,7 +51,7 @@ pilkit==2.0
 Pillow==6.2.0
 plainbox==0.38.0
 protobuf==3.10.0
-pyasn1==0.4.2
+pyasn1==0.4.7
 pycairo==1.16.2
 pycodestyle==2.5.0
 pycrypto==2.6.1
