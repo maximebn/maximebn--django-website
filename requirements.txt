@@ -4,7 +4,7 @@ astroid==2.3.1
 beautifulsoup4==4.8.1
 blinker==1.4
 Brlapi==0.6.6
-certifi==2018.1.18
+certifi==2019.9.11
 chardet==3.0.4
 checkbox-support==0.22
 command-not-found==0.3
