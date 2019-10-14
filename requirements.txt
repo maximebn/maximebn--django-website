@@ -35,7 +35,7 @@ lazy-object-proxy==1.4.2
 louis==3.5.0
 lxml==4.4.1
 macaroonbakery==1.2.3
-Mako==1.0.7
+Mako==1.1.0
 MarkupSafe==1.0
 mccabe==0.6.1
 mysql-connector-python==8.0.16
