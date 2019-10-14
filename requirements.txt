@@ -46,7 +46,7 @@ oauthlib==3.1.0
 olefile==0.46
 onboard==1.4.1
 padme==1.1.1
-pexpect==4.2.1
+pexpect==4.7.0
 pilkit==2.0
 Pillow==6.0.0
 plainbox==0.25
