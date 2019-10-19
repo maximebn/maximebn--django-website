@@ -13,7 +13,6 @@ ANNEXES_DATA_DESC = 'Renseignez ici les différentes catégories que vous souhai
 ANNEXES_MENTIONS_NOT_FOUND= 'Oups, aucune mention légale aujourd\'hui, ce doit être une erreur !'
 ANNEXES_DATA_NOT_FOUND = 'Oups, aucune mention relative à la confidentialité des données, ce doit être une erreur !'
 
-
 # Errors
 ERROR_ANNEXES_ABOUT_VAL = 'Seulement une instance de la section A propos est autorisée !'
  
