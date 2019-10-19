@@ -23,7 +23,7 @@
 
             <!-- Default value if no mention is found -->
             {% empty %}
-                <p>Oups, aucune mention légale aujourd'hui, ce doit être une erreur !</p>
+                <p>{{ mention.mentionNotFound }}</p>
                 <meta http-equiv="refresh" content="3;url={% url "storiesMain" %}">
 
             <!-- Default value if no mention is found : END -->

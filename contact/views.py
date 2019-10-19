@@ -3,6 +3,7 @@ from .forms import ContactForm
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.conf import settings
+from maximebn import staticAttributes
 
 def contact(request):
 
@@ -14,9 +15,9 @@ def contact(request):
             sujet = form.cleaned_data['sujet']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            recipients = ['maximebn@posteo.ru']
+            recipients = [settings.EMAIL_HOST_USER]
 
-            en_tete = 'Un nouveau message vient de vous être adressé par '+nom+' ('+email+') :\n'
+            en_tete = staticAttributes.EMAIL_HEADER + nom + ' ('+email+') :\n'
             message = en_tete+'\n'+message
 
             send_mail(sujet, message, settings.EMAIL_HOST_USER, recipients)

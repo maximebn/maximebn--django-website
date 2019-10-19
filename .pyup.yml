@@ -8,6 +8,10 @@ update: all
 # allowed: True, False
 pin: True
 
+# set the default branch
+# default: empty, the default branch on GitHub
+branch: dev
+
 # update schedule
 # default: empty
 # allowed: "every day", "every week", ..
@@ -21,10 +25,6 @@ label_prs: update
 # configure the branch prefix the bot is using
 # default: pyup-
 branch_prefix: pyup/
-
-# set a global prefix for PRs
-# default: empty
-pr_prefix: "Bug "
 
 # allow to close stale PRs
 # default: True
@@ -41,3 +41,4 @@ requirements:
   - requirements-dev.txt:
       # don't update dependencies, use global 'pin' default
       update: all
+      pin: True

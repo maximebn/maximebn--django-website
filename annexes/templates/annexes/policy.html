@@ -24,7 +24,7 @@
 
             <!-- Default value if no policy is found -->
             {% empty %}
-                <p>Oups, aucune mention relative à la confidentialité des données, ce doit être une erreur !</p>
+                <p>{{ policy.dataNotFound }}</p>
                 <meta http-equiv="refresh" content="3;url={% url "storiesMain" %}">
 
             <!-- Default value if no mention is found : END -->
