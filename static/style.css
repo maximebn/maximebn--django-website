@@ -27,12 +27,12 @@ dl, dt, dd, ol, ul, li {
 a {
   font-size: 13px;
   font-weight: 400;
-  color: #2c2c2c;
+  color: #084047e5;
   text-decoration: none;
   letter-spacing: 1px;
 }
 a:hover {
-  color: rgba(44, 44, 44, 0.8);
+  color: rgb(16, 126, 120);
   text-decoration: none;
 }
 img {
@@ -72,6 +72,11 @@ ion-icon {
   text-align: right;
   position: right;
   margin-bottom: 10px;
+}
+#fire-icon ion-icon {
+  margin-top: -10px;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 body {
   font-family: 'Ubuntu', sans-serif;
@@ -1135,27 +1140,22 @@ textarea {
   font-size: 18px;
 }
 #django img {
-  height: 16px;
+  height: 20px;
   margin-bottom: 35px;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-right: 5px;
 }
 #py-logo img {
   margin-left: 10px;
   margin-bottom: 35px;
-  height: 16px;
-}
-#canonical-logo img {
-  margin-left: 5px;
-  margin-bottom: 35px;
-  height: 16px;
+  height: 36px;
 }
 .copyrights {
   margin-top: -20px;
   font-size:11px;
 }
 .copyrights:hover {
-  color: #2c2c2c;
+  color: #084047e5;
 }
 .copyrights-policy {
   margin-top: -20px;
@@ -1163,6 +1163,10 @@ textarea {
 }
 .copyrights-policy:hover {
   color: rgb(8, 46, 58);
+}
+.copyrights img {
+  height: 20px;
+  margin-right: -6px;
 }
 
 
