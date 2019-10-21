@@ -1,5 +1,5 @@
 apturl==0.5.2
-asn1crypto==1.1.0
+asn1crypto==1.2.0
 astroid==2.3.1
 beautifulsoup4==4.8.1
 blinker==1.4
