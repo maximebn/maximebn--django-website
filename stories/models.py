@@ -12,6 +12,8 @@ class Story(models.Model):
     auteur = models.CharField(max_length=42)
     annee = models.CharField(max_length=40)
     contenu = models.TextField(null=True)
+    mapFrameLink = models.TextField(null=False, verbose_name="adresse de la carte OpenStreetMaps pour intégration dans une iFrame")
+    mapLink = models.TextField(null=True, verbose_name="lien vers la carte OpenStreetMaps.org")
 
     slug = models.SlugField(max_length=100)
     date = models.DateTimeField(default=timezone.now, 

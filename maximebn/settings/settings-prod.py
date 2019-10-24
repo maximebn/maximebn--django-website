@@ -25,7 +25,17 @@ DATABASES = {
 
 # Cache configuration
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
-CACHES = {}
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 600,
+        'OPTIONS': {
+            'MAX_ENTRIES': 100
+        }
+    }
+}
+
 
 #-------------------------------------------------------------------------------
 # Additionnal security settings
