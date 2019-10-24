@@ -3,8 +3,24 @@ from contact.forms import ContactForm
 
 class ContactTests(TestCase):
 
-    def test_forms(self):
-        form_data = {'something': 'something'}#to change
+    def test_valid_form(self):
+        form_data = {'sujet': 'Test subject', 'nom':'MyName', 'email':'myname@mail.com', 'message':'Here is a sample message'}
         form = ContactForm(data=form_data)
         self.assertTrue(form.is_valid())
-        ... # other tests relating forms, for example checking the form data
+    
+    def test_blank_data(self):
+        form = ContactForm({})
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors, {
+        'sujet': ['Ce champ est obligatoire.'],
+        'nom': ['Ce champ est obligatoire.'],
+        'email': ['Ce champ est obligatoire.'],
+        'message': ['Ce champ est obligatoire.']
+    })
+
+    def test_unvalid_mail(self):
+        form = ContactForm({'sujet': 'Test subject', 'nom':'MyName', 'email':'mynamemail.com', 'message':'Here is a sample message'})
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors, {
+        'email': ['Saisissez une adresse de courriel valide.'],
+    })
