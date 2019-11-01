@@ -1,5 +1,6 @@
 from django.test import TestCase
 from contact.forms import ContactForm
+from django.urls import reverse
 
 class ContactTests(TestCase):
 
@@ -24,3 +25,9 @@ class ContactTests(TestCase):
         self.assertEqual(form.errors, {
         'email': ['Saisissez une adresse de courriel valide.'],
     })
+
+class ContactViewTests(TestCase):
+    
+    def test_normal_view(self):
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)

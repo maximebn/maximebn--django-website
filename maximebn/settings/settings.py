@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'contact',
     'annexes',
     'easy_thumbnails',
+    'coverage',
 ]
 
 MIDDLEWARE = [

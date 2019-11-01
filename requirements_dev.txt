@@ -2,6 +2,7 @@ astroid==2.2.5
 certifi==2019.9.11
 chardet==3.0.4
 Click==7.0
+coverage==4.5.4
 Deprecated==1.2.6
 Django==2.2.6
 django-appconf==1.0.3
