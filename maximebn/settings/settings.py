@@ -142,6 +142,7 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+SERVER_EMAIL = config('SERVER_EMAIL', default='')
 
 # Manager configuration
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins

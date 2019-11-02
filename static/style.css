@@ -105,8 +105,24 @@ h1.heading-404 {
   margin-top: 60px;
   padding-bottom: 10px;
 }
+h1.heading-500 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 100px;
+  color: white;
+}
 h2 {
   font-size: 24px;
+}
+h2.heading-500 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38px;
+  text-align: center;
+  color: white;
 }
 h2.title {
   font-size: 28px;
@@ -128,6 +144,14 @@ h4.heading-404 {
   font-weight: 300;
   text-align: center;
   margin-top: 80px;
+  margin-bottom: 20%;
+}
+h4.heading-500 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20%;
+  color: white;
 }
 h5 {
   font-size: 18px;
@@ -154,6 +178,20 @@ li {
   color: #848484;
   margin-bottom: 10px;
   letter-spacing: 1px;
+}
+.error-500 {
+  color: white;
+  margin-top: 3%;
+  background-image: url("images/1876.jpg");
+  background-size: cover;
+  padding-bottom: 5%;
+}
+.error-403 {
+  color: white;
+  margin-top: 3%;
+  background-image: url("images/1873.jpg");
+  background-size: cover;
+  padding-bottom: 5%;
 }
 
 /*-----------------------------------------------------------

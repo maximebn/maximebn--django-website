@@ -31,3 +31,8 @@ class ContactViewTests(TestCase):
     def test_normal_view(self):
         response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)
+    
+    def test_contact_view_uses_correct_template(self):
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'contact/contact.html')
