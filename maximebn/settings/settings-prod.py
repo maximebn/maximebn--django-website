@@ -7,10 +7,13 @@ import re
 SECRET_KEY = config('SECRET_KEY_PROD')
 DEBUG = config('DEBUG_PROD', default=False, cast=bool)
 
+#INSTALLED_APPS += [
+#    '',
+#]
 
 # Allowed hosts for production environment, must be suitable value
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-ALLOWED_HOSTS = ['.maximebn.com']
+ALLOWED_HOSTS = ['51.15.140.89']
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -53,18 +56,18 @@ CACHES = {
 # Click-jacking protection : X-frame middleware setting header option to deny loading resource within a frame
 # https://docs.djangoproject.com/en/2.1/ref/clickjacking/
 
-X_FRAME_OPTIONS = 'DENY'
+#X_FRAME_OPTIONS = 'DENY'
 
 # XSS filtering protection enabled on web browsers (+ Django templates escaping specific characters)
 # https://docs.djangoproject.com/en/2.1/ref/clickjacking/
 
-SECURE_BROWSER_XSS_FILTER  = True
+#SECURE_BROWSER_XSS_FILTER  = True
 
 # Cookie sessions protection, forcing cookies to be shared by HTTPS
 # https://docs.djangoproject.com/en/2.1/topics/http/sessions/
 
 # to activate SESSION_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
