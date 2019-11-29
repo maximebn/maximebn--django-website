@@ -40,17 +40,11 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
+coverage_html_report/*
 .coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+
+# Media
+media/*
 
 # Translations
 *.mo
@@ -99,9 +93,9 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
-.venv
-.ini
+*.env
+*.venv
+*.ini
 env/
 venv/
 ENV/
@@ -135,10 +129,8 @@ GitHub.sublime-settings
 
 # Visual Studio Code # 
 .vscode/* 
-!.vscode/settings.json 
-!.vscode/tasks.json 
-!.vscode/launch.json 
-!.vscode/extensions.json 
+.vscode/settings.json 
+.vscode/tasks.json 
+.vscode/launch.json 
+.vscode/extensions.json 
 .history
-
-*.ini

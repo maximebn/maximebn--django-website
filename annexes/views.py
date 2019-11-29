@@ -1,3 +1,4 @@
+from django.views.decorators.cache import cache_page
 from django.shortcuts import render
 from annexes.models import Mentions, About, Policy
 
@@ -10,6 +11,7 @@ def mentions(request):
 
     return render(request, 'annexes/mentions.html', {'mentions': list_mentions})
 
+@cache_page(60 * 10)
 def about(request):
     try:
         about = About.objects.last()

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.core.exceptions import ValidationError
+from maximebn import staticAttributes
 
 #_________________________________________________________________
 # ABOUT 
@@ -26,7 +27,7 @@ class About(models.Model):
         if About.objects.exists() and not self.pk:
         # if you'll not check for self.pk 
         # then error will also raised in update of exists model
-            raise ValidationError('Seulement une instance de la section A propos est autorisée !')
+            raise ValidationError(staticAttributes.ERROR_ANNEXES_ABOUT_VAL)
         return super(About, self).save(*args, **kwargs)
 
 #_________________________________________________________________
@@ -38,6 +39,9 @@ class Mentions(models.Model):
     contenu = models.TextField(null=True)
     dateCreation = models.DateTimeField(default=timezone.now, 
                                 verbose_name="Date de création")
+
+
+    mentionNotFound = staticAttributes.ANNEXES_MENTIONS_NOT_FOUND
 
     class Meta:
         verbose_name = "Mentions légales - catégorie"
@@ -54,7 +58,9 @@ class Policy(models.Model):
     contenu = models.TextField(null=True)
     dateCreation = models.DateTimeField(default=timezone.now, 
                                 verbose_name="Date de création")
-    
+
+    dataNotFound = staticAttributes.ANNEXES_DATA_NOT_FOUND
+        
     class Meta:
         verbose_name = "Data policy - catégorie"
 

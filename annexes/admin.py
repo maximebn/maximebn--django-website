@@ -1,5 +1,7 @@
 from django.contrib import admin
 from annexes.models import Mentions, About, Policy
+from django.conf import settings
+from maximebn import staticAttributes
 
 
 #_________________________________________________________________
@@ -13,7 +15,7 @@ class MentionsAdmin(admin.ModelAdmin):
     fieldsets = (
     # Fieldset 1 : meta-info 
    ('Général', {
-       'description': 'Renseignez ici les différentes catégories que vous souhaitez voir abordées dans les mentions légales',
+       'description': staticAttributes.ANNEXES_MENTIONS_DESC,
         'fields': ('categorie', 'contenu')
     }),
 )
@@ -27,7 +29,7 @@ class AboutAdmin(admin.ModelAdmin):
     fieldsets = (
     # Fieldset 1 : meta-info 
    ('Général', {
-       'description': 'Attention, cette page est unique. Si une section About existe déjà, n\'essayez pas d\'en sauvegarder une seconde, une erreur sera levée.',
+       'description': staticAttributes.ANNEXES_ABOUT_DESC,
         'fields': ('titre', 'contenu',)
     }),
     # Fieldset 2 : photo illustration de la section
@@ -47,7 +49,7 @@ class PolicyAdmin(admin.ModelAdmin):
     fieldsets = (
     # Fieldset 1 : meta-info 
    ('Général', {
-       'description': 'Renseignez ici les différentes catégories que vous souhaitez voir abordées dans la politique de confidentialité des données',
+       'description': staticAttributes.ANNEXES_DATA_DESC,
         'fields': ('categorie', 'contenu')
     }),
 )

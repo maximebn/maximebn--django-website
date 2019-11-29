@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Main content -->
+
+{% block content %}
+<div class="container error-403">
+    <div class="row">
+        <div class="col-sm-12 ">
+            <h1 class="heading-500"><b>Oups ... !</b><br></h1>
+            <h2 class="heading-500">Il semblerait que vous tentiez d'accéder à un endroit protégé ... Ca sent pas bon !
+                                L'espace est un endroit dangereux, retournez sur Terre.</h2>
+
+            <h4 class="heading-500"> Por favor, ne paniquez pas et faites simplement demi-tour.</h4>
+        </div>
+    </div>
+</div>
+
+<meta http-equiv="refresh" content="8;url={% url "storiesMain" %}">
+
+{% endblock %}
+
+<!-- Main content : END -->
+
+
+<!-- Footer : none -->
+{% block footer %}
+{% endblock %}
+<!-- Footer : none : END -->

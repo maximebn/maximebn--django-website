@@ -37,3 +37,5 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += url('success/', TemplateView.as_view(template_name='success.html'), name="success"),
     urlpatterns += url('404/', TemplateView.as_view(template_name='404.html'), name="404"),
+    urlpatterns += url('403/', TemplateView.as_view(template_name='403.html'), name="403"),
+    urlpatterns += url('500/', TemplateView.as_view(template_name='500.html'), name="500"),
