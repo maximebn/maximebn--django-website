@@ -54,7 +54,7 @@ packaging==19.2
 padme==1.1.1
 pexpect==4.2.1
 pilkit==2.0
-Pillow==6.0.0
+Pillow==6.2.0
 plainbox==0.25
 protobuf==3.7.1
 pyasn1==0.4.2
