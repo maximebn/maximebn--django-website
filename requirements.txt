@@ -79,7 +79,7 @@ python-decouple==3.1
 python-gitlab==1.12.1
 pytz==2019.3
 pyupio==1.0.2
-pyxdg==0.25
+pyxdg==0.26
 PyYAML==5.1.2
 reportlab==3.4.0
 requests==2.22.0
