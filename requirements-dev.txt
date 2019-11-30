@@ -11,6 +11,7 @@ dparse==0.4.1
 easy-thumbnails==2.6
 entrypoints==0.3
 flake8==3.7.7
+gunicorn==20.0.4
 idna==2.8
 isort==4.3.20
 Jinja2==2.10.3
@@ -22,15 +23,18 @@ mysqlclient==1.4.2.post1
 packaging==19.2
 pilkit==2.0
 Pillow==6.2.0
+pkg-resources==0.0.0
 protobuf==3.7.1
 pycodestyle==2.5.0
 pyflakes==2.1.1
 PyGithub==1.43.8
 PyJWT==1.7.1
 pylint==2.3.1
+PyMySQL==0.9.3
 pyparsing==2.4.2
 python-decouple==3.1
 python-gitlab==1.12.1
+python-memcached==1.59
 pytz==2019.3
 pyupio==1.0.2
 PyYAML==5.1.2
