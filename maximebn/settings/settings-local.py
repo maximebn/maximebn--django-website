@@ -1,7 +1,6 @@
 from .settings import *
 from decouple import config
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY_LOCAL')
 
@@ -11,6 +10,11 @@ DEBUG = config('DEBUG_LOCAL', default=False, cast=bool)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 ALLOWED_HOSTS = ['*']
+
+# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
+STATICFILES_DIRS = (
+    normpath(join(SITE_ROOT, 'static')),
+)
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
