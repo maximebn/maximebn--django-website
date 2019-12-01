@@ -61,9 +61,13 @@ def update_and_deploy_on_remote():
 @print_status('getting the latest source code')
 def _get_latest_source():
     with cd(SITE_FOLDER):
-        result = run('git pull origin master')
+        result = run('git fetch origin master')
+        current_commit = local("git log -n 1 --format=%H", capture=True)  
+        run(f'git reset --hard {current_commit}')  
         if result.failed:
             abort('No git repository')
+
+
 
 # Running tests
 def _run_tests():

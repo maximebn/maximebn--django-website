@@ -53,26 +53,26 @@ CACHES = {
 # Sensitive data exposure
 # https://docs.djangoproject.com/en/2.1/ref/middleware/#http-strict-transport-security
 
-SECURE_HSTS_SECONDS = 3600 # 1 heure,to me modified after validation
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_SSL_REDIRECT= True
+# SECURE_HSTS_SECONDS = 3600 # 1 heure,to me modified after validation
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
+# SECURE_SSL_REDIRECT= True
 
 # Click-jacking protection : X-frame middleware setting header option to deny loading resource within a frame
 # https://docs.djangoproject.com/en/2.1/ref/clickjacking/
 
-X_FRAME_OPTIONS = 'DENY'
+# X_FRAME_OPTIONS = 'DENY'
 
 # XSS filtering protection enabled on web browsers (+ Django templates escaping specific characters)
 # https://docs.djangoproject.com/en/2.1/ref/clickjacking/
 
-SECURE_BROWSER_XSS_FILTER  = True
+# SECURE_BROWSER_XSS_FILTER  = True
 
 # Cookie sessions protection, forcing cookies to be shared by HTTPS
 # https://docs.djangoproject.com/en/2.1/topics/http/sessions/
 
 # to activate SESSION_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
