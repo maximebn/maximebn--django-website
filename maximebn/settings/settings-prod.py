@@ -11,6 +11,8 @@ INSTALLED_APPS += [
     'gunicorn',
 ]
 
+STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
+
 # Allowed hosts for production environment, must be suitable value
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 ALLOWED_HOSTS = ['51.15.140.89', 'maximebn.com', 'www.maximebn.com']
@@ -25,7 +27,10 @@ DATABASES = {
         'USER': config('DB_USER_PROD'),
         'PASSWORD': config('DB_PASSWORD_PROD'),    
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',    
+        'PORT': '3306',
+        'TEST': {
+            'NAME': 'test_maximebnProject',
+        },
     }
 }
 
