@@ -6,14 +6,12 @@ from fabric.utils import fastprint, abort
 from contextlib import contextmanager
 from configparser import RawConfigParser
 
+# ----------------------------------------------------------------------
 config = RawConfigParser()
 config.read('maximebn/settings.ini')
-
-# ----------------------------------------------------------------------
 USER_FOLDER = config.get('fabfile', 'USER_FOLDER')
 SITE_FOLDER = config.get('fabfile', 'SITE_FOLDER')
 PROD_SETTINGS = config.get('fabfile', 'PROD_SETTINGS')
-
 # ----------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
