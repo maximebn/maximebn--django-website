@@ -15,7 +15,7 @@ PROD_SETTINGS = config.get('fabfile', 'PROD_SETTINGS')
 # ----------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
-# Optional : status decorators 
+# Optional : status decorators
 # ----------------------------------------------------------------------
 def print_status(description):
     def print_status_decorator(fn):
@@ -95,7 +95,7 @@ def _update_database():
         run(f'../venv/bin/python3 manage.py makemigrations --settings={PROD_SETTINGS} --noinput')
 
 # Restarting application
-@print_status('OK. now restarting application')
+@print_status('restarting application')
 def _restart_application():
     sudo('supervisorctl reread')
     sudo('supervisorctl reload')
