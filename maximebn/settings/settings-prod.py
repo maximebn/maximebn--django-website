@@ -82,3 +82,5 @@ IGNORABLE_404_URLS = (
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
 )
+
+CSP_DEFAULT_SRC = ("'unsafe-inline'",)
