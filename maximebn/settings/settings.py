@@ -157,3 +157,6 @@ USE_TZ = True
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
 # https://pyup.io/
+
+FRAME_SRC=['openstreetmap.org']
+

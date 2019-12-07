@@ -24,7 +24,6 @@ def storiesMain(request):
 Here a view for one specific story, the primary key (id) is used to identify the good one.
 If that story does not exist, a 404 error is sent.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-@csp(FRAME_SRC=['openstreetmap.org'])
 @cache_page(60 * 360)
 def storiesDetails(request, id): 
     story = get_object_or_404(Story, id=id)
