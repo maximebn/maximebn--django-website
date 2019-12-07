@@ -83,4 +83,4 @@ IGNORABLE_404_URLS = (
     re.compile(r'^/robots\.txt$'),
 )
 
-CSP_DEFAULT_SRC = ("'unsafe-inline'",)
+CSP_DEFAULT_SRC = ("'unsafe-inline'","'self'")
