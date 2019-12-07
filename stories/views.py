@@ -2,8 +2,6 @@ from django.views.decorators.cache import cache_page
 from django.shortcuts import render, get_object_or_404
 from stories.models import Story, Img
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from csp.decorators import csp
-
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 Here a view that needs to treat a list of stories.

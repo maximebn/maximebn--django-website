@@ -48,11 +48,13 @@
                    
                 {% for image in images %}
                     <div class="cbp-item">
-                        <div class="cbp-item-wrapper">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="{{ image.img.url }}" alt="">
+                        <a href="/media/{{ image.img.name }}" class="cbp-caption cbp-lightbox">
+                            <div class="cbp-item-wrapper">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="{{ image.img.url }}" alt="">
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 {% empty %}
