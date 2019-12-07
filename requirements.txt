@@ -4,7 +4,7 @@ chardet==3.0.4
 Click==7.0
 coverage==4.5.4
 Deprecated==1.2.6
-Django==2.2.6
+Django==2.2.8
 django-appconf==1.0.3
 django-widget-tweaks==1.4.5
 dparse==0.4.1
