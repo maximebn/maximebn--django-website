@@ -20,7 +20,7 @@ class Story(models.Model):
                                 verbose_name="Date de parution")
 
     photo = models.ImageField(upload_to="stories/")
-    photo_2 = models.ImageField(upload_to="stories/", null=True)   
+    ##photo_2 = models.ImageField(upload_to="stories/", null=True)   
 
     class Meta:
         verbose_name = "Story"
