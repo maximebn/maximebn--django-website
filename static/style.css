@@ -1266,9 +1266,13 @@ a.mentions {
     line-height: 38px;
   }
 
+  #page-wrapper {
+    margin-bottom : -1510px;
+  }
+
   #header.standard {
     padding-top: 0;
-    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 50px;
   }
   #header.standard #main-menu {
     display: none;
@@ -1380,8 +1384,9 @@ a.mentions {
   }
 
   #footer.standard {
-    padding: 50px 0 70px 0;
+    margin-top: 100px;
   }
+
   #footer.standard .footer-socials {
     text-align: center;
     margin-top: 10px;

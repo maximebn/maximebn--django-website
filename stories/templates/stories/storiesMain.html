@@ -43,6 +43,19 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="cbp-item">
+                            <div class="cbp-caption">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="{{ story.photo_2.url }}" alt="">
+                                </div>
+                                
+                                <div class="slider-project-details">
+                                    <h1 class="sp-title">{{ story.titre }}</h1>
+                                        <a href="{% url "storiesDetails" id=story.id %}" class="sp-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
                                         
                     <!-- Default value if no story is found -->
                     {% empty %}

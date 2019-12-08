@@ -91,8 +91,8 @@ def _update_static_files():
 @print_status('operating database migration operations')
 def _update_database():
     with cd(SITE_FOLDER):
-        run(f'../venv/bin/python3 manage.py migrate --settings={PROD_SETTINGS} --noinput')
         run(f'../venv/bin/python3 manage.py makemigrations --settings={PROD_SETTINGS} --noinput')
+        run(f'../venv/bin/python3 manage.py migrate --settings={PROD_SETTINGS} --noinput')
 
 # Restarting application
 @print_status('restarting application')
