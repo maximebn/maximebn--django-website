@@ -666,15 +666,15 @@ li {
   bottom: -40px;
 }
 .portfolio-wrap #portfolio-slider.single-project .cbp-nav-pagination-item {
-  background: #2c2c2c;
-  opacity: .4;
+  background: #016e72;
+  opacity: .2;
   width: 14px;
   height: 14px;
   margin: 0 6px;
 }
 .portfolio-wrap #portfolio-slider.single-project .cbp-nav-pagination-active {
-  background: #2c2c2c;
-  opacity: 0.7;
+  background: #084b50;
+  opacity: 0.6;
 }
 .portfolio-wrap #portfolio-slider.single-project .slider-project-details {
   position: absolute;
