@@ -11,11 +11,11 @@ It needs a Paginator to define how many articles we want to display per page
 def storiesMain(request):
     list_stories = Story.objects.all()
 
-    paginator = Paginator(list_stories, 2)
-    page = request.GET.get('page')
-    stories = paginator.get_page(page)
+    #paginator = Paginator(list_stories, 6)
+    #page = request.GET.get('page')
+    #stories = paginator.get_page(page)
 
-    return render(request, 'stories/storiesMain.html', {'list_stories': stories})
+    return render(request, 'stories/storiesMain.html', {'list_stories': list_stories})
 
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

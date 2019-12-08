@@ -19,7 +19,9 @@ class Story(models.Model):
     date = models.DateTimeField(default=timezone.now, 
                                 verbose_name="Date de parution")
 
-    photo = models.ImageField(upload_to="stories/")    
+    photo = models.ImageField(upload_to="stories/")
+    photo_2 = models.ImageField(upload_to="stories/", null=True)   
+
     class Meta:
         verbose_name = "Story"
         ordering = ['date']
