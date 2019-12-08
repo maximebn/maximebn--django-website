@@ -10,7 +10,7 @@
         var kraft_carousel = $( '.kraft-carousel' )
         
         var google_map     = $( '#googleMap' );
-        
+       
         // Superfish Init
         $( main_menu ).superfish({
             
@@ -177,12 +177,12 @@
                     width: 320,
                     cols: ( portfolioSlider.data( 'mobile-portrait' ) == null ) ? 1 : portfolioSlider.data( 'mobile-portrait' )
                 }],
-            animationType       : portfolioSlider.data( 'animationtype' ),
+            animationType       : 'quicksand',
             gapHorizontal       : ( portfolioSlider.data( 'gaphorizontal' ) == null ) ? 0 : portfolioSlider.data( 'gaphorizontal' ),
             gapVertical         : ( portfolioSlider.data( 'gapvertical' ) == null ) ? 0   : portfolioSlider.data( 'gapvertical' ),
             caption             : ( portfolioSlider.data( 'captionanimation' ) == null ) ? 'fadeIn' : portfolioSlider.data( 'captionanimation' ),
             auto                : ( portfolioSlider.data( 'autoplay' ) == null ) ? 'true' : portfolioSlider.data( 'autoplay'),
-            autoTimeout         : ( portfolioSlider.data( 'autoplaytimeout' ) == null ) ? '3500' : portfolioSlider.data( 'autoplaytimeout'),
+            autoTimeout         : ( portfolioSlider.data( 'autoplaytimeout' ) == null ) ? '5500' : portfolioSlider.data( 'autoplaytimeout'),
             autoPauseOnHover    : ( portfolioSlider.data( 'autopauseonhover' ) == null ) ? 'true' : portfolioSlider.data( 'autopauseonhover'),
             showNavigation      : true,
             showPagination      : true,
