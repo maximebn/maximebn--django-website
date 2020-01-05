@@ -16,7 +16,6 @@
         <div class="col-md-12 col-sm-12 margin-top-35">
             {% for mention in mentions %}
 
-            <h2 class="mentions">{{ mention.categorie}}</h2>
             {% autoescape off %}
                 <p>{{ mention.contenu | linebreaks | safe}}<p>
             {% endautoescape %}
@@ -27,7 +26,6 @@
                 <meta http-equiv="refresh" content="3;url={% url "storiesMain" %}">
 
             <!-- Default value if no mention is found : END -->
-
             {% endfor %}
             <!-- Each occurence of mentions category is displayed : END FOR -->
 

@@ -16,8 +16,6 @@
         <div class="col-md-12 col-sm-12 margin-top-35">
 
             {% for policy in dataPolicies %}
-
-            <h2 class="policy">{{ policy.categorie }}</h2>
             {% autoescape off %}
                 <p> {{ policy.contenu | linebreaks }} <p>
             {% endautoescape %}
