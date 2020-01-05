@@ -12,14 +12,15 @@
         <meta name="author" content="Maxime" />
         
         <!-- Links -->      
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baskervville|Raleway|Ubuntu:300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400|Zilla+Slab:300&display=swap" rel="stylesheet"> 
         <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
         <link href="{% static 'css/cubeportfolio.css' %}" rel="stylesheet" type="text/css"/>
         <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css"/>
         <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
         
         <!-- Document Title -->      
-        <title> {% block title %}Maxime Boulanghien | Photographie{% endblock %}</title>
+        <title> {% block title %}maxime boulanghien | Photographie{% endblock %}</title>
         <link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
         
     </head>
@@ -34,7 +35,7 @@
                     <div class="container">
                         <div id="logo">
                             <a href="{% url "storiesMain" %}">
-                                <div>Maxime Boulanghien</div>
+                                <div>maxime boulanghien</div>
                             </a>
                         </div>
                         <span id="menu-trigger"><span></span></span>
@@ -42,7 +43,7 @@
                         <nav id="main-menu">
                             <ul>
                             {% block navigation_stories %}
-                                <li><a href="{% url "storiesMain" %}">+ Stories</a>
+                                <li><a href="{% url "storiesMain" %}">+ stories</a>
                                     <ul>
                                        <li><a href="">First Story</a></li>
                                         <li><a href="">Second Story</a>
@@ -52,15 +53,15 @@
                             {% endblock %}
 
                             {% block navigation_blog %}
-                                <li><a href="{% url "blogList" %}">+ Blog</a></li>
+                                <li><a href="{% url "blogList" %}">+ blog</a></li>
                             {% endblock %}
 
                             {% block navigation_about %}
-                                <li><a href="{% url "about" %}">A propos</a></li>
+                                <li><a href="{% url "about" %}">à propos</a></li>
                             {% endblock %}
 
                             {% block navigation_contact %}
-                                <li><a href="{% url "contact" %}">Contact</a></li>
+                                <li><a href="{% url "contact" %}">contact</a></li>
                             {% endblock %}
 
                             </ul>
