@@ -25,8 +25,8 @@ dl, dt, dd, ol, ul, li {
   padding: 0;
 }
 a {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 200;
   color: #084047e5;
   text-decoration: none;
   letter-spacing: 1px;
@@ -82,8 +82,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 h1 {
-  font-size: 28px;
+  font-size: 26px;
+  color : rgba(0, 0, 0, 0.678);
   font-weight: 400;
+  font-family: 'Josefin Slab', serif;
 }
 h1.heading {
   font-size: 38px;
@@ -352,10 +354,11 @@ li {
   float: left;
 }
 #header.standard .header-wrapper #logo a {
-  font-size: 18px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
   font-weight: 400;
-  color: #2c2c2c;
-  letter-spacing: 2px;
+  color: #252424e0;
+  letter-spacing: 4px;
   margin-top:26px;
   display: block;
 }
@@ -571,7 +574,7 @@ li {
   margin-bottom: 10px;
 }
 .portfolio-wrap .cbp-l-filters-text .cbp-filter-item {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   padding: 0;
   letter-spacing: 1px;
   line-height: normal;
@@ -591,7 +594,7 @@ li {
   margin-right: 0;
 }
 .portfolio-wrap .cbp-l-caption-title {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
@@ -599,7 +602,7 @@ li {
   letter-spacing: 1px;
 }
 .portfolio-wrap .cbp-l-caption-desc {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
@@ -666,15 +669,14 @@ li {
   bottom: -40px;
 }
 .portfolio-wrap #portfolio-slider.single-project .cbp-nav-pagination-item {
-  background: #016e72;
+  background: #cadfe2c9;
   opacity: .2;
   width: 14px;
   height: 14px;
   margin: 0 6px;
 }
 .portfolio-wrap #portfolio-slider.single-project .cbp-nav-pagination-active {
-  background: #084b50;
-  opacity: 0.6;
+  background: #aeb4b6ef;
 }
 .portfolio-wrap #portfolio-slider.single-project .slider-project-details {
   position: absolute;
@@ -701,9 +703,9 @@ li {
   margin: 0;
 }
 .portfolio-wrap #portfolio-slider.single-project .slider-project-details .sp-link {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.788);
   opacity: .5;
   right: 40px;
 }
@@ -746,7 +748,7 @@ li {
 }
 
 .cbp-popup-lightbox-title, .cbp-popup-lightbox-counter {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -755,7 +757,7 @@ li {
 }
 
 .cbp-l-grid-agency-title {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #2c2c2c;
@@ -764,7 +766,7 @@ li {
 }
 
 .cbp-l-grid-agency-desc {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   color: #848484;
   text-align: left;
@@ -1331,17 +1333,6 @@ a.mentions {
   }
   #header.standard .header-wrapper #main-menu > ul li .level-three > li > a {
     padding-left: 35px;
-  }
-  #header.standard .header-wrapper #main-menu > ul li.has-child > a:after {
-    font-family: 'ionicons';
-    content: "\f3d0";
-    color: inherit;
-    position: absolute;
-    top: 0;
-    right: 17px;
-    -webkit-transition: .3s all;
-    -o-transition: .3s all;
-    transition: .3s all;
   }
   #header.standard .header-wrapper #main-menu > ul li.has-child:hover > a:after {
     transform: rotate(180deg);
