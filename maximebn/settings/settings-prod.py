@@ -15,7 +15,7 @@ STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
 
 # Allowed hosts for production environment, must be suitable value
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-ALLOWED_HOSTS = ['51.15.140.89', 'maximebn.com', 'www.maximebn.com']
+ALLOWED_HOSTS = ['51.15.140.89', 'maximebn.com', 'www.maximebn.com', '127.0.0.1']
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
