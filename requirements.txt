@@ -9,7 +9,7 @@ django-appconf==1.0.3
 django-widget-tweaks==1.4.5
 dparse==0.4.1
 easy-thumbnails==2.7
-entrypoints==0.3Fabric3==1.14.post1
+entrypoints==0.3
 Fabric3==1.14.post1
 flake8==3.7.9
 gunicorn==20.0.4
