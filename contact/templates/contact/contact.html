@@ -42,9 +42,13 @@
                                               {{ form.message |add_class:'form-control' |append_attr:"placeholder:Message*" }}
                                         </div>
 
-                                        <div class="form-submit">
+                                        <div class="form-submit col-sm-6 no-padding-left">
                                             <button type="submit" id="submit">Envoyer mon message</button>
-                                        </div>                                    
+                                        </div>
+                                        
+                                        <div class="col-sm-6 no-padding-right form-control-wrap">
+                                            {{ form.captcha  }}
+                                        </div>
                                 </form>
 
                             </div>

@@ -1,90 +1,193 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %}
 
 <!-- Main content -->
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-          <div class="page-title">
-              <h1 class="heading policy">Politique de <b>confidentialité</b></h1>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-title">
+        <h1 class="heading policy">Politique de <b>confidentialité</b></h1>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 col-sm-12 margin-top-35">
-            <h2 class="policy">Propriétaire et responsable du traitement</h2>
-                <p>Maxime Boulanghien <br>
-                   Courriel de contact : contact[at]maximebn.com
-                
-            <h2 class="policy">Type de données collectées</h2>
-                <p> Figurent parmi les types de données personnelles que cette application collecte directement ou en recourant à des tiers : <b>données d'utilisation, nom/prénom et adresse électronique.</b></p>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 margin-top-35">
+      <h2 class="policy">Propriétaire et responsable du traitement</h2>
+      <p>
+        Maxime Boulanghien <br />
+        Courriel de contact : contact[at]maximebn.com
+      </p>
 
-                <p>Les données personnelles sont librement fournies par l’utilisateur, ou, en cas de données d’utilisation, collectées automatiquement lorsque vous utilisez cette application.
-                   Les utilisateurs qui auraient des doutes sur le type de données personnelles à caractère obligatoires (champs du formulaire de contact) sont invités à contacter le propriétaire directement par le biais de son adresse mail de contact ou bien à ne pas le contacter du tout.
-                   Toute utilisation des cookies – ou d’autres outils de suivi – par cette application ou par les propriétaires de services tiers utilisés par cette application <b>vise à fournir un service adéquat à l'utilisateur</b>.
-                   Les utilisateurs sont évidemment responsables de toute donnée personnelle tierce obtenue, publiée ou communiquée par l’intermédiaire de cette application et confirment qu’ils obtiennent le consentement dudit tiers (c'est votre faute, pas la mienne).</p>
+      <h2 class="policy">Type de données collectées</h2>
+      <p>
+        Figurent parmi les types de données personnelles que cette application
+        collecte directement ou en recourant à des tiers :
+        <b>données d'utilisation, nom/prénom et adresse électronique.</b>
+      </p>
 
-            <h2 class="policy">Traitement des données collectées</h2>
+      <p>
+        Les données personnelles sont librement fournies par l’utilisateur, ou,
+        en cas de données d’utilisation, collectées automatiquement lorsque vous
+        utilisez cette application. Les utilisateurs qui auraient des doutes sur
+        le type de données personnelles à caractère obligatoires (champs du
+        formulaire de contact) sont invités à contacter le propriétaire
+        directement par le biais de son adresse mail de contact ou bien à ne pas
+        le contacter du tout. Toute utilisation des cookies – ou d’autres outils
+        de suivi – par cette application ou par les propriétaires de services
+        tiers utilisés par cette application
+        <b>vise à fournir un service adéquat à l'utilisateur</b>. Les
+        utilisateurs sont évidemment responsables de toute donnée personnelle
+        tierce obtenue, publiée ou communiquée par l’intermédiaire de cette
+        application et confirment qu’ils obtiennent le consentement dudit tiers
+        (c'est votre faute, pas la mienne).
+      </p>
 
-                <p>Outre le propriétaire, les données peuvent être accessibles, dans certains cas, à des parties externes 
-                (telles que les fournisseurs tiers de services techniques, les services de messagerie ou les fournisseurs d’hébergement) désignées, le cas échéant, comme sous-traitantes par le propriétaire. 
-                Et eux, ils en ont de la donnée !</p>
+      <h2 class="policy">Traitement des données collectées</h2>
 
-                    <h5 class="policy">En détails : formulaire de contact</h5>
-                        <p>En remplissant le formulaire de contact avec ses données, est autorisée l'utilisation de ces renseignements par cette application afin de répondre aux demandes d'information tel que l'indique l'en-tête du formulaire.
-                        Données collectées : nom et adresse électronique (personnelles) et éventuellement d'autres types de données (méta-données). </p>
-                    
-                    <h5 class="policy">En détails : hébergement et infrastructure back-end</h5>
-                        <p>Ce type de service a pour objet d'héberger des données et fichiers qui permettent à cette application de fonctionner, d’être distribuée et de fournir une infrastructure prête à l’emploi.
-                        Il est possible que certains des services fonctionnent à travers des serveurs répartis géographiquement, rendant la position réelle du stockage des donneés difficile à déterminer. 
-                        Pour information, le service de gestion du développement utilisé est GitHub. Le service d'hébérgement est ScaleWay. Quoi qu'il en soit, aucune donnée à caractère personnel
-                        et identifiable n'est stockée sur l'un ou l'autre des deux services précédemment mentionné. Ouf !
+      <p>
+        Outre le propriétaire, les données peuvent être accessibles, dans
+        certains cas, à des parties externes (telles que les fournisseurs tiers
+        de services techniques, les services de messagerie ou les fournisseurs
+        d’hébergement) désignées, le cas échéant, comme sous-traitantes par le
+        propriétaire. Et eux, ils en ont de la donnée !
+      </p>
 
-            <h2 class="policy">Utilisation des données collectées</h2>
-                <p>Rassurez-vous, <b>les données collectées ne servent qu'à vous proposer le service minimum </b>. Entre autres, elles permettent surtout de vous répondre directement
-                par le biais de votre adresse mail lorsque vous me contactez au moyen de la page formulaire.</p>
+      <h5 class="policy">En détails : formulaire de contact</h5>
+      <p>
+        En remplissant le formulaire de contact avec ses données, est autorisée
+        l'utilisation de ces renseignements par cette application afin de
+        répondre aux demandes d'information tel que l'indique l'en-tête du
+        formulaire. Données collectées : nom et adresse électronique
+        (personnelles) et éventuellement d'autres types de données
+        (méta-données).
+      </p>
 
-                <p>Aujourd'hui, aucune analyse statistique de fréquentation du site n'est mise en place (type Google Analytics), vu le peu d'intérêt que cela présente.
-                Il n'est néanmoins pas impossible que cela soit le cas dans le futur, bien que la précédente solution citée ait peu de chances d'être adoptée.
-                Je vous invite donc à surveiller d'éventuelles mises à jour de cette politique de confidentialité, dans la mesure où la mise en place de tels outils serait invisible pour l'utilisateur final.
-                De même pour un éventuel futur système de commentaires, surveillez cette page, ou bien ne le faites pas si vous considérez que c'est inutile vu
-                l'état de dispersion déjà inquiétant de vos données sur la toile.</p>
+      <h5 class="policy">
+        En détails : hébergement et infrastructure back-end
+      </h5>
+      <p>
+        Ce type de service a pour objet d'héberger des données et fichiers qui
+        permettent à cette application de fonctionner, d’être distribuée et de
+        fournir une infrastructure prête à l’emploi. Il est possible que
+        certains des services fonctionnent à travers des serveurs répartis
+        géographiquement, rendant la position réelle du stockage des donneés
+        difficile à déterminer. Pour information, le service de gestion du
+        développement utilisé est GitHub. Le service d'hébérgement est ScaleWay.
+        Quoi qu'il en soit, aucune donnée à caractère personnel et identifiable
+        n'est stockée sur l'un ou l'autre des deux services précédemment
+        mentionné. Ouf !
+      </p>
 
-                <p>Je suis évidemment <b>le seul propriétaire du peu d'informations recueillies </b> sur ce site. Je ne vends, ni n'échange, ni ne transfère 
-                aucune de vos informations personnelles identifiables (pour rappel : nom et adresse électronique) à aucun tiers (heureusement parce que vous ne vous battez pas pour me contacter). Encore une fois, et bien qu'utilisant au maximum 
-                des solutions techniques open-source pour lesquelles les politiques de confidentialité et traitement des données sont claires, cela ne comprend pas 
-                d'éventuelles tierces parties qui permettent de faire tourner ce site. Se référer à la partie Traitement des données collectées pour plus d'informations à ce sujet.</p>
-            
-            <h2 class="policy">Temps de conservation des données collectées</h2>
-                <p>Les données collectées sont conservées aussi longtemps que requis pour la finalité pour laquelle elles ont été collectées.
-                Ce qui veut dire en d'autres termes, pas bien longtemps si votre message n'est pas intéressant, et un peu plus longtemps si nous sommes amenés à échanger.</p>
-            
-            <h2 class="policy">Logs et maintenance</h2>
-                <p>A des fins de maintenance, cette application et/ou des services tiers sont suceptibles de collecter
-                   des données de monitoring, c'est-à-dire décrivant différentes interactions avec l'application (System Logs),
-                   et/ou d'utiliser d'autre type de données (adresse IP, date ..).</p>
+      <h5 class="policy">En détails : Google ReCaptcha</h5>
+      <p>
+        J'avais voulu l'éviter mais les petits malins du web sont nombreux ...
+        et malins, surtout en temps de crise (oui, au moment où j'écris ces
+        lignes, on cherche souvent à me vendre des masques anti-coronavirus,
+        malin disais-je). Du coup, on utilise Google reCAPTCHA, service fourni
+        par Google pour vérifier si les données saisies sur le formulaire de
+        contact l'ont été par un utilisateur ou par un programme automatisé.
+        Pour ce faire, reCAPTCHA analyse le comportement du visiteur du site en
+        fonction de différentes caractéristiques (par exemple, l’adresse IP, la
+        durée pendant laquelle le visiteur a été sur le site Web ou les
+        mouvements de souris effectués par l’utilisateur). Cette analyse démarre
+        automatiquement dès que le visiteur du site web entre sur le site. Cela
+        va sans dire, ces données sont collectées et transmises à Google. Et
+        tout ceci se déroule en arrière-plan : les visiteurs ne sont pas
+        informés qu’une telle analyse est en cours. C'est intrusif, je
+        l'accorde. Mais ne rien faire l'est encore bien plus pour moi. Plus
+        d’informations sur Google reCAPTCHA :
+        https://www.google.com/intl/de/policies/privacy/ et
+        https://www.google.com/recaptcha/intro/
+      </p>
 
-            <h2 class="policy">Droits des utilisateurs</h2>
-                <p>Vous pouvez exercer certains droits sur les données ici traitées. En particulier, vous avez la possibilité de :</p>
-                    <ul class="policy">
-                        <li><b>Retirer votre consentement</b> à tout moment</li>
-                        <li>Vous <b>opposer au traitement</b> des données (ce qui serait quand même bête, car reviendrait à me contacter pour que je ne puisse pas vous répondre)</li>
-                        <li><b>Accéder à vos données</b> (nom/prénom, adresse mail, archives)</li>
-                        <li>Faire <b>supprimer ou effacer vos données</b> collectées ; c'est-à-dire nom/prénom, adresse mail et messages archivés, ce qui a de grandes chances d'être 
-                        déjà le cas au moment où vous le demanderez, à moins que vous n'en fassiez la demande immédiatement après m'avoir contacté, ce qui là n'aurait pas de sens, sinon de m'embêter.</li>
-                    </ul>
-        </div>
+      <h2 class="policy">Utilisation des données collectées</h2>
+      <p>
+        Rassurez-vous,
+        <b
+          >les données collectées ne servent qu'à vous proposer le service
+          minimum </b
+        >. Entre autres, elles permettent surtout de vous répondre directement
+        par le biais de votre adresse mail lorsque vous me contactez au moyen de
+        la page formulaire.
+      </p>
+
+      <p>
+        Hors mis l'utilisation de Google reCAPTCHA dont les données servent
+        Google (voir plus haut), jusqu'à aujourd'hui aucune analyse statistique
+        de fréquentation du site n'est mise en place (type Google Analytics), vu
+        le peu d'intérêt que cela présente. Il n'est néanmoins pas impossible
+        que cela soit le cas dans le futur, bien que la précédente solution
+        citée ait peu de chances d'être adoptée. Je vous invite donc à
+        surveiller d'éventuelles mises à jour de cette politique de
+        confidentialité, dans la mesure où la mise en place de tels outils
+        serait invisible pour l'utilisateur final. De même pour un éventuel
+        futur système de commentaires, surveillez cette page, ou bien ne le
+        faites pas si vous considérez que c'est inutile vu l'état de dispersion
+        déjà inquiétant de vos données sur la toile.
+      </p>
+
+      <p>
+        Je suis évidemment
+        <b>le seul propriétaire du peu d'informations recueillies </b> sur ce
+        site. Je ne vends, ni n'échange, ni ne transfère aucune de vos
+        informations personnelles identifiables (pour rappel : nom et adresse
+        électronique) à aucun tiers (heureusement parce que vous ne vous battez
+        pas pour me contacter). Encore une fois, et bien qu'utilisant au maximum
+        des solutions techniques open-source pour lesquelles les politiques de
+        confidentialité et traitement des données sont claires, cela ne comprend
+        pas d'éventuelles tierces parties qui permettent de faire tourner ce
+        site. Se référer à la partie Traitement des données collectées pour plus
+        d'informations à ce sujet.
+      </p>
+
+      <h2 class="policy">Temps de conservation des données collectées</h2>
+      <p>
+        Les données collectées sont conservées aussi longtemps que requis pour
+        la finalité pour laquelle elles ont été collectées. Ce qui veut dire en
+        d'autres termes, pas bien longtemps si votre message n'est pas
+        intéressant, et un peu plus longtemps si nous sommes amenés à échanger.
+      </p>
+
+      <h2 class="policy">Logs et maintenance</h2>
+      <p>
+        A des fins de maintenance, cette application et/ou des services tiers
+        sont suceptibles de collecter des données de monitoring, c'est-à-dire
+        décrivant différentes interactions avec l'application (System Logs),
+        et/ou d'utiliser d'autre type de données (adresse IP, date ..).
+      </p>
+
+      <h2 class="policy">Droits des utilisateurs</h2>
+      <p>
+        Vous pouvez exercer certains droits sur les données ici traitées. En
+        particulier, vous avez la possibilité de :
+      </p>
+      <ul class="policy">
+        <li><b>Retirer votre consentement</b> à tout moment</li>
+        <li>
+          Vous <b>opposer au traitement</b> des données (ce qui serait quand
+          même bête, car reviendrait à me contacter pour que je ne puisse pas
+          vous répondre)
+        </li>
+        <li>
+          <b>Accéder à vos données</b> (nom/prénom, adresse mail, archives)
+        </li>
+        <li>
+          Faire <b>supprimer ou effacer vos données</b> collectées ;
+          c'est-à-dire nom/prénom, adresse mail et messages archivés, ce qui a
+          de grandes chances d'être déjà le cas au moment où vous le demanderez,
+          à moins que vous n'en fassiez la demande immédiatement après m'avoir
+          contacté, ce qui là n'aurait pas de sens, sinon de m'embêter.
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
 
 {% endblock %}
 
 <!-- Main content : END -->
 
-
 <!-- Footer : none -->
-{% block footer %}
-{% endblock %}
+{% block footer %} {% endblock %}
 <!-- Footer : none : END -->

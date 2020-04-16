@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'widget_tweaks',
+    'captcha',
     'blog',
     'stories',
     'contact',
@@ -51,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
         ]
@@ -153,6 +153,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
+# ReCAPTCHA
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_SITE_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_SECRETKEY')
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
 # https://pyup.io/
