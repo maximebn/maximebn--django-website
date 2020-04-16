@@ -157,7 +157,6 @@ USE_TZ = True
 # ReCAPTCHA
 RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_SITE_KEY')
 RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_SECRETKEY')
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 # Information: PyUp tracking and deploying dependencies vulerabilities fixes automatically.
 # https://pyup.io/
