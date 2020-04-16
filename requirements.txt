@@ -4,7 +4,7 @@ chardet==3.0.4
 Click==7.0
 coverage==5.0.3
 Deprecated==1.2.7
-Django==3.0.3
+Django==3.0.5
 django-appconf==1.0.3
 django-widget-tweaks==1.4.5
 dparse==0.4.1
@@ -37,7 +37,7 @@ python-gitlab==2.0.1
 python-memcached==1.59
 pytz==2019.3
 pyupio==1.0.2
-PyYAML==5.3
+PyYAML==5.3.1
 requests==2.23.0
 safety==1.8.5
 six==1.14.0
