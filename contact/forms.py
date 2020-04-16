@@ -11,7 +11,6 @@ class ContactForm(forms.Form):
     captcha = fields.ReCaptchaField(
     widget=widgets.ReCaptchaV2Checkbox(
         attrs={
-            'data-size': 'compact'
-    }
+        }
     )
 )
