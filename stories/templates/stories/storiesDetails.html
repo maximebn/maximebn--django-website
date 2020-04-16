@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 <!-- stories navigation overloading : active -->
-
+<!-- 
 {% block navigation_stories %}
     <li><a href="{% url "storiesMain" %}" class="active"><div>+ stories</div></a>
         <ul>
-        <li><a href=""><div>First Story</div></a></li>
-        <li><a href="">Second Story</a></li>
+            <li><a href="{% url "storiesDetails" 5 %}">Un automne au Pamir</a></li>
+            <li><a href="{% url "storiesDetails" 6 %}">Retour au Royaume</a>
+            <li><a href="{% url "storiesDetails" 7 %}">Tendre différence kirghize</a>
+            <li><a href="{% url "storiesDetails" 8 %}">Kelin Salam</a>
+            </li>
         </ul>
     </li>
-{% endblock %}
+{% endblock %} -->
 
 <!-- stories navigation overloading END -->
 
