@@ -30,7 +30,7 @@ Jinja2==2.11.3
 lazy-object-proxy==1.5.2
 MarkupSafe==1.1.1
 mccabe==0.6.1
-mysql-connector-python==8.0.19
+mysql-connector-python==8.0.23
 mysqlclient==1.4.6
 packaging==20.1
 paramiko==2.7.1
