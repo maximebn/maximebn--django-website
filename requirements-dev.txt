@@ -33,7 +33,7 @@ mccabe==0.6.1
 mysql-connector-python==8.0.23
 mysqlclient==2.0.3
 packaging==20.9
-paramiko==2.7.1
+paramiko==2.7.2
 
 pilkit==2.0
 Pillow==7.0.0
