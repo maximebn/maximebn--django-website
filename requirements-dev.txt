@@ -6,7 +6,7 @@ cffi==1.14.5
 chardet==4.0.0
 Click==7.1.2
 coverage==5.5
-cryptography==2.8
+cryptography==3.4.6
 
 Deprecated==1.2.7
 Django==3.0.5
