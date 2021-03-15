@@ -62,6 +62,6 @@ safety==1.10.3
 six==1.15.0
 sqlparse==0.4.1
 tqdm==4.59.0
-typed-ast==1.4.1
+typed-ast==1.4.2
 urllib3==1.25.8
 wrapt==1.12.0
