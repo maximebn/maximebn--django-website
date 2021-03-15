@@ -59,7 +59,7 @@ pyupio==1.1.2
 PyYAML==5.4.1
 requests==2.25.1
 safety==1.10.3
-six==1.14.0
+six==1.15.0
 sqlparse==0.3.0
 tqdm==4.43.0
 typed-ast==1.4.1
