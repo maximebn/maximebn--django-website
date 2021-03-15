@@ -9,7 +9,7 @@ coverage==5.5
 cryptography==3.4.6
 
 Deprecated==1.2.12
-Django==3.0.5
+Django==3.1.7
 django-antispam==1.0.1
 
 django-appconf==1.0.3
