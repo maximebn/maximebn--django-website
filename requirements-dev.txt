@@ -51,7 +51,7 @@ PyNaCl==1.4.0
 pyparsing==2.4.7
 python-akismet==0.4.2
 
-python-decouple==3.3
+python-decouple==3.4
 python-gitlab==2.0.1
 python-memcached==1.59
 pytz==2019.3
